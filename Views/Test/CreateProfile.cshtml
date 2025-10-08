@@ -1,0 +1,84 @@
+﻿@model TyMiniProject.Models.Profile
+@{
+    ViewData["Title"] = "Test Create Profile";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-primary text-white text-center rounded-top-4">
+                    <h3>Create Your Profile</h3>
+                </div>
+                <div class="card-body p-4">
+
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger">@TempData["Error"]</div>
+                    }
+
+                    <form asp-action="CreateProfile" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label asp-for="FullName" class="form-label fw-semibold"></label>
+                                <input asp-for="FullName" class="form-control" placeholder="Enter your full name" />
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Dob" class="form-label fw-semibold"></label>
+                                <input asp-for="Dob" type="date" class="form-control" />
+                                <span asp-validation-for="Dob" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="AdmissionYear" class="form-label fw-semibold"></label>
+                                <input asp-for="AdmissionYear" class="form-control" />
+                                <span asp-validation-for="AdmissionYear" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Branch" class="form-label fw-semibold"></label>
+                                <input asp-for="Branch" class="form-control" />
+                                <span asp-validation-for="Branch" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Caste" class="form-label fw-semibold"></label>
+                                <input asp-for="Caste" class="form-control" />
+                                <span asp-validation-for="Caste" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Email" class="form-label fw-semibold"></label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="FeeCategory" class="form-label fw-semibold"></label>
+                                <input asp-for="FeeCategory" class="form-control" />
+                                <span asp-validation-for="FeeCategory" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="PRN" class="form-label fw-semibold"></label>
+                                <input asp-for="PRN" class="form-control" />
+                                <span asp-validation-for="PRN" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="PhoneNumber" class="form-label fw-semibold"></label>
+                                <input asp-for="PhoneNumber" class="form-control" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-success px-5 py-2">Create Profile</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

@@ -1,0 +1,90 @@
+﻿@model TyMiniProject.Models.Profile
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-warning text-white text-center rounded-top-4">
+                    <h3>Edit Profile</h3>
+                </div>
+                <div class="card-body p-4">
+
+                    <form asp-action="CreateProfile" asp-controller="Profile" method="post" enctype="multipart/form-data">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label asp-for="FullName" class="form-label fw-semibold"></label>
+                                <input asp-for="FullName" class="form-control" />
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Dob" class="form-label fw-semibold"></label>
+                                <input asp-for="Dob" type="date" class="form-control" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="AdmissionYear" class="form-label fw-semibold"></label>
+                                <input asp-for="AdmissionYear" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Branch" class="form-label fw-semibold"></label>
+                                <input asp-for="Branch" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Caste" class="form-label fw-semibold"></label>
+                                <input asp-for="Caste" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Email" class="form-label fw-semibold"></label>
+                                <input asp-for="Email" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="FeeCategory" class="form-label fw-semibold"></label>
+                                <input asp-for="FeeCategory" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="PRN" class="form-label fw-semibold"></label>
+                                <input asp-for="PRN" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="PhoneNumber" class="form-label fw-semibold"></label>
+                                <input asp-for="PhoneNumber" class="form-control" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="ImageFile" class="form-label fw-semibold">Update Photo</label>
+                                <input asp-for="ImageFile" type="file" accept="image/*" class="form-control" id="photoInput" />
+                            </div>
+
+                            <div class="col-12 text-center mt-3">
+                                <img id="previewImage" src="~/StudentPhoto/@Model.ImageUrl" class="img-thumbnail rounded-circle shadow" style="max-width:150px;" />
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary px-5 py-2">Save Changes</button>
+                            <a asp-action="ProfileDetails" class="btn btn-secondary px-4 ms-2">Cancel</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.getElementById('photoInput').addEventListener('change', function (event) {
+            const [file] = event.target.files;
+            if (file) {
+                const img = document.getElementById('previewImage');
+                img.src = URL.createObjectURL(file);
+                img.style.display = 'block';
+            }
+        });
+    </script>
+}

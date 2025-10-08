@@ -22,8 +22,8 @@
 
   <ItemGroup>
     <Folder Include="Views\Fee\" />
-    <Folder Include="Views\Profile\" />
     <Folder Include="wwwroot\Images\" />
+    <Folder Include="wwwroot\StudentPhoto\" />
   </ItemGroup>
 
 </Project>

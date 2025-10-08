@@ -1,0 +1,46 @@
+﻿@model TyMiniProject.Models.Profile
+@{
+    ViewData["Title"] = "Profile Details";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-primary text-white text-center rounded-top-4">
+                    <h3>Your Profile</h3>
+                </div>
+                <div class="card-body text-center p-4">
+
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["Success"]</div>
+                    }
+
+                    <div class="mb-4">
+                        <img src="~/StudentPhoto/@Model.ImageUrl" class="rounded-circle border shadow" style="width:150px; height:150px; object-fit:cover;" />
+                    </div>
+
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr><th>Full Name</th><td>@Model.FullName</td></tr>
+                            <tr><th>Date of Birth</th><td>@Model.Dob.ToString("dd MMM yyyy")</td></tr>
+                            <tr><th>Admission Year</th><td>@Model.AdmissionYear</td></tr>
+                            <tr><th>Branch</th><td>@Model.Branch</td></tr>
+                            <tr><th>Caste</th><td>@Model.Caste</td></tr>
+                            <tr><th>Email</th><td>@Model.Email</td></tr>
+                            <tr><th>Fee Category</th><td>@Model.FeeCategory</td></tr>
+                            <tr><th>PRN</th><td>@Model.PRN</td></tr>
+                            <tr><th>Phone Number</th><td>@Model.PhoneNumber</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="mt-4">
+                        <a asp-action="ProfileEdit" class="btn btn-warning px-4"><i class="bi bi-pencil"></i> Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

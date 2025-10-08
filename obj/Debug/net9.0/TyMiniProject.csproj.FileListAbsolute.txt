@@ -233,3 +233,4 @@ E:\TYMiniProject\TyMiniProject\TyMiniProject\obj\Debug\net9.0\TyMiniProject.pdb
 E:\TYMiniProject\TyMiniProject\TyMiniProject\obj\Debug\net9.0\TyMiniProject.genruntimeconfig.cache
 E:\TYMiniProject\TyMiniProject\TyMiniProject\obj\Debug\net9.0\ref\TyMiniProject.dll
 E:\TYMiniProject\TyMiniProject\TyMiniProject\obj\Debug\net9.0\compressed\ckrqgmmmqq-nkadxgu51t.gz
+E:\TYMiniProject\TyMiniProject\TyMiniProject\obj\Debug\net9.0\TyMiniProject.sourcelink.json

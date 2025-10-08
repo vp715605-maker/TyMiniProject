@@ -1,7 +1,5 @@
-wwwroot\css\account.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\Images\account-bg.webp
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -63,6 +61,8 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\account.css
+wwwroot\Images\account-bg.webp
 E:\TYMiniProject\TyMiniProject\TyMiniProject\wwwroot\css\site.css
 E:\TYMiniProject\TyMiniProject\TyMiniProject\wwwroot\favicon.ico
 E:\TYMiniProject\TyMiniProject\TyMiniProject\wwwroot\js\site.js

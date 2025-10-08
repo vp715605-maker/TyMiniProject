@@ -1,7 +1,35 @@
 ﻿﻿@{
-ViewData["Title"] = "User Page";
+ViewData["Title"] = "User Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to User page</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+
+                <!-- Header Section -->
+                <div class="text-white text-center py-5" style="background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);">
+                    <h1 class="fw-bold mb-2">Welcome to Your Dashboard 🎓</h1>
+                    <p class="mb-0 fs-5">Manage your student profile and fee details easily</p>
+                </div>
+
+                <!-- Body Section -->
+                <div class="card-body text-center bg-light py-5">
+                    <h4 class="text-secondary mb-4">Ready to begin?</h4>
+                    <p class="text-muted mb-4">Create your student profile to get started with the Fee Portal.</p>
+
+                    <a asp-controller="Profile" asp-action="CreateProfile"
+                       class="btn btn-lg px-5 py-3 text-white shadow-lg rounded-pill"
+                       style="background: linear-gradient(45deg, #43e97b 0%, #38f9d7 100%); font-size: 1.2rem;">
+                        <i class="bi bi-person-plus-fill me-2"></i> Create Your Profile
+                    </a>
+                </div>
+
+                <!-- Footer -->
+                <div class="card-footer text-center text-white py-3" style="background-color: #212529;">
+                    <small>© @DateTime.Now.Year TY Mini Project | Fee Portal</small>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
